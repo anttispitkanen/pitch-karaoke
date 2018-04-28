@@ -1,0 +1,20 @@
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    box-shadow: 0px -3px 10px 0px black;
+
+    .header-logo {
+        height: 50px;
+        padding: 20px;
+    }
+
+    .main-heading {
+        margin: 0;
+        padding: 20px 40px;
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+}

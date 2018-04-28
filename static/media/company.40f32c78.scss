@@ -1,0 +1,21 @@
+.company-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+
+    .company-name {
+        padding: 40px;
+        font-size: 3rem;
+    }
+
+    .company-btn {
+        outline: none;
+        border: none;
+        color: white;
+        background-color: rgb(44, 142, 64);
+        font-size: 1rem;
+        padding: 20px;
+        cursor: pointer;
+    }
+}
