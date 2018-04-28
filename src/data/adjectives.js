@@ -60,7 +60,9 @@ const adjectives = [
     'Super',
     'Mega',
     'Unseen',
-    'Familiar'
+    'Familiar',
+    'Neural',
+    'Cosmic'
 ];
 
 module.exports = { adjectives };

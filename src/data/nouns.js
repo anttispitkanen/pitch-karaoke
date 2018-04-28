@@ -35,7 +35,10 @@ const nouns = [
     'Mountain',
     'Water',
     'Space',
-    'Travel'
+    'Travel',
+    'Service',
+    'Travel',
+    'World'
 ];
 
 module.exports = { nouns };
