@@ -1,0 +1,16 @@
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .header-logo {
+        height: 50px;
+        padding: 20px;
+    }
+
+    .main-heading {
+        margin: 0;
+        padding: 20px 40px;
+    }
+}
