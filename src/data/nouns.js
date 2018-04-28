@@ -18,7 +18,24 @@ const nouns = [
     'Friend',
     'Unicorn',
     'Human',
-    'Animal'
+    'Animal',
+    'City',
+    'Machine',
+    'Kitten',
+    'Science',
+    'Einstein',
+    'Rocket',
+    'Connection',
+    'Mother',
+    'Room',
+    'Shoes',
+    'Sports',
+    'Eyes',
+    'Book',
+    'Mountain',
+    'Water',
+    'Space',
+    'Travel'
 ];
 
 module.exports = { nouns };
