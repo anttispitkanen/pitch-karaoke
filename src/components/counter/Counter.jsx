@@ -56,9 +56,11 @@ class Counter extends Component {
         if (this.state.time > 60) {
             return 'black';
         } else if (this.state.time > 30) {
-            return 'orange';
+            // ES logo orange
+            return 'rgb(255, 162, 32)';
         } else {
-            return 'red';
+            // ES logo red
+            return 'rgb(255, 0, 83)';
         }
     }
 
