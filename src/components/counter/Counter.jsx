@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
+import TimeSelector from './timeSelector/TimeSelector';
 
 import './counter.scss';
 
-const time = 120;
+const originalFullTime = 120; // default to 2 minutes
 
 class Counter extends Component {
     constructor() {
         super();
         this.state = {
             running: false,
-            time: time,
-            timer: null
+            fullTime: originalFullTime,
+            time: originalFullTime,
+            timer: null,
+            selectorVisible: false
         };
     }
 
@@ -39,7 +43,7 @@ class Counter extends Component {
     reset = () => {
         this.setState({
             running: false,
-            time: time
+            time: this.state.fullTime
         });
         clearInterval(this.state.timer);
     }
@@ -64,11 +68,31 @@ class Counter extends Component {
         }
     }
 
+    changeTime = newTime => {
+        this.setState({
+            fullTime: newTime,
+            time: newTime,
+            selectorVisible: false
+        });
+    }
+
+    showTimeSelector = () => {
+        this.setState({
+            selectorVisible: true
+        });
+    }
+
+    closeSelector = () => {
+        this.setState({
+            selectorVisible: false
+        });
+    }
+
     render() {
-        console.log(this.state)
+        console.log(this.state) // FIXME: remove log
         return (
             <div className="counter-container">
-                <span className="time" style={{ color: this.color() }}>
+                <span className="time" style={{ color: this.color() }} onDoubleClick={this.showTimeSelector}>
                     {this.renderTime()}
                 </span>
                 <div className="btns-container">
@@ -77,6 +101,11 @@ class Counter extends Component {
                     </button>
                     <button className="reset" onClick={this.reset}>Reset</button>
                 </div>
+                <TimeSelector
+                    className={classNames({ 'visible': this.state.selectorVisible })}
+                    changeTime={this.changeTime}
+                    closeSelector={this.closeSelector}
+                />
             </div>
         );
     }
