@@ -8,7 +8,7 @@ class App extends Component {
                     <h1 className="App-title">Welcome to ES :D</h1>
                 </header>
                 <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
+                    Jees jees
                 </p>
             </div>
         );
