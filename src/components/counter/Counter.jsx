@@ -89,7 +89,6 @@ class Counter extends Component {
     }
 
     render() {
-        console.log(this.state) // FIXME: remove log
         return (
             <div className="counter-container">
                 <span className="time" style={{ color: this.color() }} onDoubleClick={this.showTimeSelector}>
