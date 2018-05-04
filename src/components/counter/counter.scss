@@ -1,3 +1,5 @@
+@import '../commons.scss';
+
 .counter-container {
     display: flex;
     flex-direction: column;
@@ -7,6 +9,18 @@
     .time {
         font-size: 5rem;
         padding: 20px;
+    }
+
+    .time.black {
+        color: $black;
+    }
+
+    .time.orange {
+        color: $orange;
+    }
+
+    .time.red {
+        color: $red;
     }
 
     .btns-container {
@@ -21,11 +35,11 @@
         }
 
         .pause-start {
-            background-color: rgb(0, 129, 195);
+            background-color: $blue;
         }
 
         .reset {
-            background-color: rgb(255, 0, 83);
+            background-color: $red;
         }
     }
 }

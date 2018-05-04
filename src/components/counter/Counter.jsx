@@ -61,10 +61,10 @@ class Counter extends Component {
             return 'black';
         } else if (this.state.time > 30) {
             // ES logo orange
-            return 'rgb(255, 162, 32)';
+            return 'orange';
         } else {
             // ES logo red
-            return 'rgb(255, 0, 83)';
+            return 'red';
         }
     }
 
@@ -91,7 +91,7 @@ class Counter extends Component {
     render() {
         return (
             <div className="counter-container">
-                <span className="time" style={{ color: this.color() }} onDoubleClick={this.showTimeSelector}>
+                <span className={classNames('time', this.color())} onClick={this.showTimeSelector}>
                     {this.renderTime()}
                 </span>
                 <div className="btns-container">

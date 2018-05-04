@@ -1,3 +1,5 @@
+@import '../../commons.scss';
+
 .time-selector-container {
     display: none;
 }
@@ -25,10 +27,10 @@
 
     .time-btn {
         width: 200px;
-        background-color: rgb(0, 129, 195);
+        background-color: $blue;
     }
 
     .close-btn {
-        background-color: rgb(255, 0, 83);
+        background-color: $red;
     }
 }

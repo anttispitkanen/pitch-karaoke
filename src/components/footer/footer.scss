@@ -1,3 +1,5 @@
+@import '../commons.scss';
+
 .main-footer {
     width: 100vw;
     display: flex;
@@ -11,7 +13,7 @@
         padding: 10px 40px;
 
         a {
-            color: rgb(0, 129, 195);
+            color: $blue;
             text-decoration: none;
         }
     }
