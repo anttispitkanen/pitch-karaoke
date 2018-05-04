@@ -1,6 +1,8 @@
+@import '../commons.scss';
+
 .main-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     width: 100vw;
@@ -8,19 +10,32 @@
 
     .header-logo {
         height: 45px;
-        padding: 20px;
-    }
-
-    .main-heading {
-        margin: 0;
         padding: 20px 40px;
-        font-weight: 400;
-        font-size: 1.8rem;
     }
 
-    a {
-        color: inherit;
-        text-decoration: none;
-        font-size: 1.8rem;
+    .heading-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 20px;
+
+        .main-heading {
+            margin: 0;
+            padding-left: 20px;
+            font-weight: 400;
+            font-size: 1.8rem;
+
+            span {
+                color: $gray;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 1.8rem;
+            padding: 0;
+            margin: 0;
+        }
     }
 }
