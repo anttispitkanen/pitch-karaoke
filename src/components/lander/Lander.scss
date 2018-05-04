@@ -1,0 +1,39 @@
+@import '../commons.scss';
+
+.lander {
+    .lander-heading {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .poison {
+        text-align: center;
+        margin: 40px;
+    }
+
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .link {
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            margin: 10px 0;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .quickfire {
+            background-color: $blue;
+        }
+
+        .karaoke {
+            background-color: $red;
+        }
+    }
+}

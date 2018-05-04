@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 import Header from './components/header/Header';
-import Company from './components/company/Company';
-import Counter from './components/counter/Counter';
 import Footer from './components/footer/Footer';
+
+import RootRoutes from './RootRoutes';
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <Header />
-                <Company />
-                <Counter />
-                <Footer />
-            </div>
+            <Router>
+                <div className="App">
+                    <Header />
+                    <RootRoutes />
+                    <Footer />
+                </div>
+            </Router>
         );
     }
 }
