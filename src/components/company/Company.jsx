@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { adjectives } from '../../data/adjectives';
 import { nouns } from '../../data/nouns';
+import { randomPicker } from '../../utils/randomPicker';
 
 import './company.scss';
 
 class Company extends Component {
     constructor() {
         super();
-        const adjective = adjectives[Math.floor(Math.random() * 1000000) % adjectives.length];
-        const noun = nouns[Math.floor(Math.random() * 1000000) % nouns.length];
+        const adjective = randomPicker(adjectives);
+        const noun = randomPicker(nouns);
         this.state = {
             adjective,
             noun
@@ -16,8 +17,8 @@ class Company extends Component {
     }
 
     draw = () => {
-        const adjective = adjectives[Math.floor(Math.random() * 1000000) % adjectives.length];
-        const noun = nouns[Math.floor(Math.random() * 1000000) % nouns.length];
+        const adjective = randomPicker(adjectives);
+        const noun = randomPicker(nouns);
         this.setState({
             adjective,
             noun
