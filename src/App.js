@@ -9,7 +9,7 @@ import RootRoutes from './RootRoutes';
 class App extends Component {
     render() {
         return (
-            <Router>
+            <Router basename="/pitch-karaoke">
                 <div className="App">
                     <Header />
                     <RootRoutes />
