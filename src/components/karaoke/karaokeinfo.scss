@@ -1,0 +1,25 @@
+@import '../commons.scss';
+
+.karaoke-wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    p {
+        text-align: center;
+    }
+
+    .go-link {
+        color: white;
+        background-color: $green;
+        text-decoration: none;
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        padding: 20px;
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
+}
