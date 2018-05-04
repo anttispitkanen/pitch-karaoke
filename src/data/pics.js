@@ -7,7 +7,30 @@ const pics = [
     'https://imgur.com/Xxcmhk4',
     'https://imgur.com/0EBbtWT',
     'https://imgur.com/og3Nnb6',
-    'https://imgur.com/ri3acZK'
+    'https://imgur.com/ri3acZK',
+    'https://imgur.com/mY7vDUY',
+    'https://imgur.com/a4BjKW9',
+    'https://imgur.com/JLNWwx2',
+    'https://imgur.com/LDEoRnR',
+    'https://imgur.com/zU7v1cO',
+    'https://imgur.com/S4NuSgi',
+    'https://imgur.com/YIZjg4y',
+    'https://imgur.com/RVB14rm',
+    'https://imgur.com/pJ6yoYC',
+    'https://imgur.com/QtTwx20',
+    'https://imgur.com/lBFYpQx',
+    'https://imgur.com/Y4w22Ov',
+    'https://imgur.com/N7Y5AJQ',
+    'https://imgur.com/bElVsA3',
+    'https://imgur.com/rFiXecJ',
+    'https://imgur.com/jzqvOJq',
+    'https://imgur.com/L4MWryZ',
+    'https://imgur.com/jx3Z9sX',
+    'https://imgur.com/81wmZzZ',
+    'https://imgur.com/FmUBZoN',
+    'https://imgur.com/MJmPMar',
+    'https://imgur.com/rTxZNAo',
+    
 ];
 
 module.exports = { pics };

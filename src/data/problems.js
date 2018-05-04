@@ -15,7 +15,13 @@ const problems = [
     'Buying clothes',
     'Eating out',
     'Education',
-    'Nature'
+    'Nature',
+    'Time management',
+    'Overpopulation',
+    'Pollution',
+    'Global warming',
+    'Finding friends',
+    'Finding love'
 ];
 
 module.exports = { problems };
