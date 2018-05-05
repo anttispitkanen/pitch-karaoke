@@ -100,6 +100,7 @@ class Counter extends Component {
                     </button>
                     <button className="reset" onClick={this.reset}>Reset</button>
                 </div>
+                <p className="counter-hint">(Click on the time to set a different time)</p>
                 <TimeSelector
                     className={classNames({ 'visible': this.state.selectorVisible })}
                     changeTime={this.changeTime}
