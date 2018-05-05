@@ -18,7 +18,11 @@ const customers = [
     'Small companies',
     'Those who watch Netflix',
     'Those who don\'t use Facebook',
-    'Those without mobile phones'
+    'Those without mobile phones',
+    'The government',
+    'African countries',
+    'European countries',
+    'Car owners'
 ];
 
 module.exports = { customers };

@@ -1,7 +1,5 @@
 const solutions = [
-    'Mobile app',
     'New Social Media',
-    'Machine Learning Algorithm',
     'Artificial Intelligence',
     'Self-driving Cars',
     'Drones',
@@ -10,12 +8,19 @@ const solutions = [
     'Crowdsourcing',
     'Sharing food',
     'Sharing rides',
-    'Public transportation',
     'Special pants',
-    'Intelligent clothes',
     'Intelligent birds',
-    'A better phone',
-    'Bigger television'
+    'Recycling',
+    'Renewable energy',
+    'Crypto currency',
+    'Internet of Things',
+    'Spreading love',
+    'Small acts of kindness',
+    'Being more innovative',
+    'Thinking outside the box',
+    'Putting customers first',
+    'Being empathetic',
+    'Automating things'
 ];
 
 module.exports = { solutions };

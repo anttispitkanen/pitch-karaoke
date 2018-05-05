@@ -21,7 +21,9 @@ const problems = [
     'Pollution',
     'Global warming',
     'Finding friends',
-    'Finding love'
+    'Finding love',
+    'Public transportation',
+    'Flying'
 ];
 
 module.exports = { problems };

@@ -7,6 +7,7 @@ import { nouns } from '../../data/nouns';
 import { customers } from '../../data/customers';
 import { problems } from '../../data/problems';
 import { solutions } from '../../data/solutions';
+import { products } from '../../data/products';
 import { pics } from '../../data/pics';
 import { randomPicker } from '../../utils/randomPicker';
 
@@ -30,6 +31,11 @@ class Slides extends Component {
             img: randomPicker(pics),
             content: randomPicker(solutions)
         };
+        const product = {
+            title: 'Product/service',
+            img: randomPicker(pics),
+            content: randomPicker(products)
+        };
         const customer = {
             title: 'Customers',
             img: randomPicker(pics),
@@ -38,7 +44,7 @@ class Slides extends Component {
 
         this.state = {
             current: 0,
-            slides: [company, problem, solution, customer]
+            slides: [company, problem, solution, product, customer]
         };
 
         document.addEventListener('keyup', this.handleKeyDown);
