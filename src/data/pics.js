@@ -29,8 +29,7 @@ const pics = [
     'https://imgur.com/81wmZzZ',
     'https://imgur.com/FmUBZoN',
     'https://imgur.com/MJmPMar',
-    'https://imgur.com/rTxZNAo',
-    
+    'https://imgur.com/rTxZNAo'
 ];
 
 module.exports = { pics };

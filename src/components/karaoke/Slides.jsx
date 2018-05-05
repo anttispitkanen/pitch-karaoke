@@ -44,7 +44,6 @@ class Slides extends Component {
         document.addEventListener('keyup', this.handleKeyDown);
     }
 
-    // TODO: how to change on touch screen?
     handleKeyDown = e => {
         const key = e.keyCode;
         if (key === 39 || key === 40) {
@@ -78,7 +77,7 @@ class Slides extends Component {
 
     render() {
         const currentSlide = this.state.slides[this.state.current];
-        return <Slide { ...currentSlide } />
+        return <Slide { ...currentSlide } next={this.next} prev={this.prev} />;
     }
 }
 
