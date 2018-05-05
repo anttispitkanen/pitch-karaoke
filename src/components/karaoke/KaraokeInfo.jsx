@@ -6,11 +6,12 @@ import './karaokeinfo.scss';
 const KaraokeInfo = () => (
     <div className="karaoke-wrapper">
         <h3>Karaoke Pitching!</h3>
-        <p>You'll get four slides:</p>
+        <p>You'll get five slides:</p>
         <ol>
             <li>Company name</li>
             <li>Problem</li>
             <li>Solution</li>
+            <li>Your product/service</li>
             <li>Customer</li>
         </ol>
         <p>The content is random.</p>
