@@ -5,12 +5,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 40px 0 20px;
+    padding: 40px 0;
+    background-color: $black;
+    color: $gray;
+
+    .footer-logo {
+        max-width: 270px;
+        margin: 20px 20px;
+    }
 
     .github, .copyright {
-        padding: 10px 40px;
+        padding: 20px;
 
         a {
             color: $blue;

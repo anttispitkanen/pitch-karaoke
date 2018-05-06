@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './logo.png';
 
 import './header.scss';
 
@@ -14,9 +13,6 @@ const Header = () => (
                 </Link>
             </h1>
         </div>
-        <a href="http://tampere.es" target="_blank" rel="noopener noreferrer">
-            <img className="header-logo" src={logo} alt="logo" />
-        </a>
     </header>
 );
 

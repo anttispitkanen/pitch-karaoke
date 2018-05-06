@@ -1,8 +1,12 @@
 import React from 'react';
+import logo from './logo.png';
 import './footer.scss';
 
 const Footer = () => (
     <footer className="main-footer">
+        <a href="http://tampere.es" target="_blank" rel="noopener noreferrer">
+            <img className="footer-logo" src={logo} alt="logo" />
+        </a>
         <span className="github">
             Feel free to fork on <a href="https://github.com/anttispitkanen/pitch-karaoke" target="_blank" rel="noopener noreferrer">Github</a>!
         </span>

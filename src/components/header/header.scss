@@ -7,17 +7,14 @@
     flex-wrap: wrap;
     width: 100vw;
     box-shadow: 0px -3px 10px 0px black;
-
-    .header-logo {
-        height: 45px;
-        margin: 20px;
-    }
+    background-color: $black;
+    color: rgb(231, 230, 230);
 
     .heading-container {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 20px 20px;
+        padding: 40px 20px;
 
         .main-heading {
             margin: 0;
