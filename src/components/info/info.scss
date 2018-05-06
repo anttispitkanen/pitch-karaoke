@@ -1,0 +1,21 @@
+@import '../commons.scss';
+
+.info-container {
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 750px;
+
+    .info-heading {
+        text-align: center;
+    }
+
+    p {
+        padding: 10px 0;
+        line-height: 1.6rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $blue;
+    }
+}

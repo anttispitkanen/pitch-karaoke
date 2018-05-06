@@ -1,6 +1,8 @@
 @import '../commons.scss';
 
 .lander {
+    padding: 40px 20px;
+
     .lander-heading {
         text-align: center;
         margin-top: 40px;
@@ -34,6 +36,10 @@
 
         .karaoke {
             background-color: $red;
+        }
+
+        .info {
+            background-color: $green;
         }
     }
 }

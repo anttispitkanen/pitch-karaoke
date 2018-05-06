@@ -10,6 +10,7 @@ const Lander = () => (
         <div className="links-container">
             <Link className="link quickfire" to="/quickfire">Quick Fire Pitching</Link>
             <Link className="link karaoke" to="/karaoke">Karaoke Pitching</Link>
+            <Link className="link info" to="/info">What is this?</Link>
         </div>
     </div>
 );
