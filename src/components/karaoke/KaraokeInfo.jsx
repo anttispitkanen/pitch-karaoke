@@ -20,7 +20,11 @@ const KaraokeInfo = () => (
 
         <Link className="go-link" to="/karaoke/slides">Go!</Link>
 
-        <p>(Press esc or back to close slideshow)</p>
+        <p>
+            <b>Tips:</b> Use arrow keys or tap the sides of the screen to move between slides.
+            Press esc or back to close the slideshow. You get new slides by closing the slideshow
+            and opening it again, or by refreshing the page when the slides are open.
+        </p>
     </div>
 );
 
