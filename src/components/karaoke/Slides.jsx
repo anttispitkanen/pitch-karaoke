@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
+import Loader from './Loader';
 import Slide from './Slide';
+import LastSlide from './LastSlide';
 
 import { adjectives } from '../../data/adjectives';
 import { nouns } from '../../data/nouns';
@@ -11,46 +13,63 @@ import { products } from '../../data/products';
 import { pics } from '../../data/pics';
 import { randomPicker } from '../../utils/randomPicker';
 
+const createCompanyName = () => randomPicker(adjectives) + ' ' + randomPicker(nouns);
+
 class Slides extends Component {
     constructor() {
         super();
 
-        // FIXME: load pics smarter as in anttipitkanen.com
         const company = {
+            name: 'company',
             title: 'Company name',
-            img: randomPicker(pics),
-            content: randomPicker(adjectives) + ' ' + randomPicker(nouns)
+            imgUrl: randomPicker(pics) + '.jpg',
+            img: null,
+            createContent: () => createCompanyName(),
+            content: ''
         };
         const problem = {
+            name: 'problem',
             title: 'Problem',
-            img: randomPicker(pics),
-            content: randomPicker(problems)
+            imgUrl: randomPicker(pics) + '.jpg',
+            img: null,
+            createContent: () => randomPicker(problems),
+            content: ''
         };
         const solution = {
+            name: 'solution',
             title: 'Solution',
-            img: randomPicker(pics),
-            content: randomPicker(solutions)
+            imgUrl: randomPicker(pics) + '.jpg',
+            img: null,
+            createContent: () => randomPicker(solutions),
+            content: ''
         };
         const product = {
+            name: 'product',
             title: 'Product/service',
-            img: randomPicker(pics),
-            content: randomPicker(products)
+            imgUrl: randomPicker(pics) + '.jpg',
+            img: null,
+            createContent: () => randomPicker(products),
+            content: ''
         };
         const customer = {
+            name: 'customer',
             title: 'Customers',
-            img: randomPicker(pics),
-            content: randomPicker(customers)
+            imgUrl: randomPicker(pics) + '.jpg',
+            img: null,
+            createContent: () => randomPicker(customers),
+            content: ''
         };
 
         this.state = {
+            loading: true,
             current: 0,
             slides: [company, problem, solution, product, customer]
         };
 
-        document.addEventListener('keyup', this.handleKeyDown);
+        document.addEventListener('keyup', this.handleKeyUp);
     }
 
-    handleKeyDown = e => {
+    handleKeyUp = e => {
         const key = e.keyCode;
         if (key === 39 || key === 40) {
             this.next();
@@ -62,11 +81,50 @@ class Slides extends Component {
     }
 
     componentWillUnmount() {
-        document.removeEventListener('keyup', this.handleKeyDown);
+        document.removeEventListener('keyup', this.handleKeyUp);
     }
 
+    async componentDidMount() {
+        await this.randomize();
+    }
+
+    randomize = async () => {
+        this.setState({
+            loading: true,
+            current: 0
+        });
+
+        const updatedSlides = await Promise.all(this.state.slides.map(async slide => ({
+            ...slide,
+            content: slide.createContent(),
+            img: await this.fetchImg(slide.imgUrl)
+        })));
+
+        this.setState({
+            loading:false,
+            slides: updatedSlides
+        });
+    }
+
+    fetchImg = url => new Promise(async (resolve, reject) => {
+        try {
+            const response = await fetch(url);
+            const blob = await response.blob();
+            const reader = new FileReader();
+            reader.readAsDataURL(blob); // read blob to base64 string
+            reader.onloadend = async () => {
+                resolve(await reader.result);
+            }
+        } catch (e) {
+            console.error(e);
+            reject(e);
+        }
+    });
+
     next = () => {
-        if (this.state.current < this.state.slides.length - 1) {
+        // index slides[slides.length] is allowed as in that case we won't try
+        // to read from the index, but display the ending slide
+        if (this.state.current < this.state.slides.length) {
             this.setState({
                 current: this.state.current + 1
             });
@@ -82,7 +140,16 @@ class Slides extends Component {
     }
 
     render() {
-        const currentSlide = this.state.slides[this.state.current];
+        if (this.state.loading) {
+            return <Loader />;
+        }
+
+        const { current, slides } = this.state;
+        if (current >= slides.length) {
+            return <LastSlide again={this.randomize} />;
+        }
+
+        const currentSlide = slides[current];
         return <Slide { ...currentSlide } next={this.next} prev={this.prev} />;
     }
 }

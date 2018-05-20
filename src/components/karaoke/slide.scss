@@ -1,3 +1,5 @@
+@import '../commons.scss';
+
 .slide {
     background-color: white;
     width: 100vw;
@@ -43,5 +45,38 @@
 
     .right {
         right: 0;
+    }
+}
+
+.loader, .last-slide {
+    background-color: $black;
+
+    .loader-logo-spinner {
+        animation: spinner 3s linear infinite;
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .go-again-btn {
+        color: white;
+        background-color: $green;
+        text-decoration: none;
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        padding: 20px;
+        margin: 20px 0;
+        text-transform: uppercase;
+        outline: none;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
     }
 }
