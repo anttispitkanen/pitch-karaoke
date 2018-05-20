@@ -22,6 +22,7 @@ class Slides extends Component {
         const company = {
             name: 'company',
             title: 'Company name',
+            createImgUrl: () => randomPicker(pics) + '.jpg',
             imgUrl: randomPicker(pics) + '.jpg',
             img: null,
             createContent: () => createCompanyName(),
@@ -30,6 +31,7 @@ class Slides extends Component {
         const problem = {
             name: 'problem',
             title: 'Problem',
+            createImgUrl: () => randomPicker(pics) + '.jpg',
             imgUrl: randomPicker(pics) + '.jpg',
             img: null,
             createContent: () => randomPicker(problems),
@@ -38,6 +40,7 @@ class Slides extends Component {
         const solution = {
             name: 'solution',
             title: 'Solution',
+            createImgUrl: () => randomPicker(pics) + '.jpg',
             imgUrl: randomPicker(pics) + '.jpg',
             img: null,
             createContent: () => randomPicker(solutions),
@@ -46,6 +49,7 @@ class Slides extends Component {
         const product = {
             name: 'product',
             title: 'Product/service',
+            createImgUrl: () => randomPicker(pics) + '.jpg',
             imgUrl: randomPicker(pics) + '.jpg',
             img: null,
             createContent: () => randomPicker(products),
@@ -54,6 +58,7 @@ class Slides extends Component {
         const customer = {
             name: 'customer',
             title: 'Customers',
+            createImgUrl: () => randomPicker(pics) + '.jpg',
             imgUrl: randomPicker(pics) + '.jpg',
             img: null,
             createContent: () => randomPicker(customers),
@@ -97,6 +102,7 @@ class Slides extends Component {
         const updatedSlides = await Promise.all(this.state.slides.map(async slide => ({
             ...slide,
             content: slide.createContent(),
+            imgUrl: slide.createImgUrl(),
             img: await this.fetchImg(slide.imgUrl)
         })));
 
