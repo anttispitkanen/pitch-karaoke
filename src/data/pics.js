@@ -1,4 +1,4 @@
-const pics = [
+export const pics = [
   'https://i.imgur.com/6JkWYgE',
   'https://i.imgur.com/jmS4AHb',
   'https://i.imgur.com/hxR8E53',
@@ -31,5 +31,3 @@ const pics = [
   'https://i.imgur.com/MJmPMar',
   'https://i.imgur.com/rTxZNAo',
 ];
-
-module.exports = { pics };

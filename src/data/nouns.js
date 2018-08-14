@@ -1,4 +1,4 @@
-const nouns = [
+export const nouns = [
   'Block',
   'Car',
   'Ride',
@@ -39,6 +39,9 @@ const nouns = [
   'Service',
   'Travel',
   'World',
+  'Computer',
+  'Coach',
+  'Coffee',
+  'Wall',
+  'House',
 ];
-
-module.exports = { nouns };

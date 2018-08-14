@@ -1,4 +1,4 @@
-const problems = [
+export const problems = [
   'Food',
   'Eating',
   'Driving',
@@ -24,6 +24,14 @@ const problems = [
   'Finding love',
   'Public transportation',
   'Flying',
+  'Loneliness',
+  'Being stressed',
+  'Entertainment',
+  'Sleeping',
+  'Waking up',
+  'Finding time for hobbies',
+  'Exercising',
+  'Networking',
+  'Finding jobs',
+  'Healthcare system',
 ];
-
-module.exports = { problems };

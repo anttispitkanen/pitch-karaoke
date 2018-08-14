@@ -1,4 +1,4 @@
-const adjectives = [
+export const adjectives = [
   'Blue',
   'Huge',
   'New',
@@ -63,6 +63,21 @@ const adjectives = [
   'Familiar',
   'Neural',
   'Cosmic',
+  'Epic',
+  'Majestic',
+  'Royal',
+  'Eco',
+  'Local',
+  'Global',
+  'Neighborhood',
+  'Aqua',
+  'Air',
+  'Innovative',
+  'Helping',
+  'Red',
+  'Orange',
+  'Yellow',
+  'Silent',
+  'Loud',
+  'Early',
 ];
-
-module.exports = { adjectives };

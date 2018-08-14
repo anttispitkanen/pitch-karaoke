@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   'Machine learning algorithm',
   'Mobile app',
   'Platform for selling clothes',
@@ -20,6 +20,15 @@ const products = [
   'Artificial money',
   'Space rocket',
   'Blockchain',
+  '"New coffee"',
+  'Flying car',
+  'Meditation app',
+  'Faster fast food',
+  '"Pants 2.0"',
+  '"Shoes 2.0"',
+  'Mind reading device',
+  'Invisibility cloack',
+  '"Hat 2.0"',
+  '"Home 2.0"',
+  '"Car 2.0"',
 ];
-
-module.exports = { products };

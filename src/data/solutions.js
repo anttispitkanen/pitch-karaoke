@@ -1,4 +1,4 @@
-const solutions = [
+export const solutions = [
   'New Social Media',
   'Artificial Intelligence',
   'Self-driving Cars',
@@ -21,6 +21,22 @@ const solutions = [
   'Putting customers first',
   'Being empathetic',
   'Automating things',
+  'Positive thinking',
+  'Old eastern wisdom',
+  'Ancient philosophy',
+  'Art',
+  'Music',
+  'Entertainment',
+  'Relaxation',
+  'Finding happiness',
+  'Exercising',
+  'Getting to know people',
+  'Networking',
+  'Learning by doing',
+  'Downshifting',
+  'Attending events',
+  'Eating more',
+  'Eating less',
+  'Eating healthier',
+  'Futuristic technology',
 ];
-
-module.exports = { solutions };
