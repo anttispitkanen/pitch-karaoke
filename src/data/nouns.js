@@ -44,4 +44,8 @@ export const nouns = [
   'Coffee',
   'Wall',
   'House',
+  'Enterprises',
+  'Inc',
+  'Ltd',
+  '& Son',
 ];

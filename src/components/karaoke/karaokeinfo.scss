@@ -1,26 +1,91 @@
 @import '../commons.scss';
 
 .karaoke-wrapper {
-    width: 100vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  p {
+    text-align: center;
+    line-height: 1.6rem;
+  }
+
+  .go-link {
+    color: white;
+    background-color: $green;
+    text-decoration: none;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+
+  .timer-controls-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
 
-    p {
-        text-align: center;
-        line-height: 1.6rem;
-    }
-
-    .go-link {
+    .timer-on-off-btns-container {
+      .btn-timer {
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 10px;
         color: white;
-        background-color: $green;
-        text-decoration: none;
-        width: 100%;
-        max-width: 250px;
-        text-align: center;
-        padding: 20px;
-        margin: 20px 0;
-        text-transform: uppercase;
+        border: 5px solid white;
+
+        &.on {
+          background-color: $blue;
+        }
+
+        &.off {
+          background-color: $red;
+        }
+
+        &:disabled {
+          cursor: default;
+          border-color: $orange;
+        }
+      }
     }
+
+    .time-and-btns-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .selected-time {
+        font-size: 2rem;
+        padding: 20px;
+      }
+
+      .timer-time-selector-btns-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .btn-time-select {
+          outline: none;
+          border: none;
+          font-size: 0.9rem;
+          cursor: pointer;
+          padding: 10px;
+          color: white;
+          background-color: $gray;
+          margin: 2px;
+
+          &.active {
+            background-color: $orange;
+          }
+        }
+      }
+    }
+  }
 }

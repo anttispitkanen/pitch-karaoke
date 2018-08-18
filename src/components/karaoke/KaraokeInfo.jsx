@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import TimerControls from './TimerControls';
 import './karaokeinfo.scss';
 
 const KaraokeInfo = () => (
@@ -17,6 +18,8 @@ const KaraokeInfo = () => (
     <p>The content is random.</p>
     <p>You have to pitch.</p>
     <p className="ready">Ready?</p>
+
+    <TimerControls />
 
     <Link className="go-link" to="/karaoke/slides">
       Go!

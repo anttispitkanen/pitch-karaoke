@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import { timeFormatter, color } from '../../utils/timeFormatter';
 import TimeSelector from './timeSelector/TimeSelector';
 
 import './counter.scss';
@@ -48,26 +49,6 @@ class Counter extends Component {
     clearInterval(this.state.timer);
   };
 
-  renderTime = () => {
-    const { time } = this.state;
-    const min = Math.floor(time / 60);
-    const sec = time % 60;
-    const secString = sec < 10 ? '0' + sec : sec;
-    return min + ':' + secString;
-  };
-
-  color = () => {
-    if (this.state.time > 60) {
-      return 'black';
-    } else if (this.state.time > 30) {
-      // ES logo orange
-      return 'orange';
-    } else {
-      // ES logo red
-      return 'red';
-    }
-  };
-
   changeTime = newTime => {
     this.setState({
       fullTime: newTime,
@@ -89,13 +70,14 @@ class Counter extends Component {
   };
 
   render() {
+    const { time } = this.state;
     return (
       <div className="counter-container">
         <span
-          className={classNames('time', this.color())}
+          className={classNames('time', color(time))}
           onClick={this.showTimeSelector}
         >
-          {this.renderTime()}
+          {timeFormatter(time)}
         </span>
         <div className="btns-container">
           <button

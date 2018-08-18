@@ -1,0 +1,29 @@
+@import '../commons.scss';
+
+.slide-timer-wrapper {
+  z-index: 999999 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: block;
+  padding: 10px 20px;
+
+  .time {
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 1px rgba($color: black, $alpha: 0.6);
+
+    &.black {
+      color: $black;
+    }
+
+    &.orange {
+      color: $orange;
+    }
+
+    &.red {
+      color: $red;
+    }
+  }
+}

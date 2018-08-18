@@ -13,7 +13,7 @@ export const problems = [
   'Living',
   'Traveling',
   'Buying clothes',
-  'Eating out',
+  'Eating outside',
   'Education',
   'Nature',
   'Time management',
