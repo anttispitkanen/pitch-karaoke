@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Loader from './Loader';
 import Slide from './Slide';
 import LastSlide from './LastSlide';
+import Timer from './Timer';
 
 import { adjectives } from '../../data/adjectives';
 import { nouns } from '../../data/nouns';
@@ -77,13 +79,9 @@ class Slides extends Component {
 
   handleKeyUp = e => {
     const key = e.keyCode;
-    if (key === 39 || key === 40) {
-      this.next();
-    } else if (key === 37 || key === 38) {
-      this.prev();
-    } else if (key === 27) {
-      window.history.back();
-    }
+    if (key === 39 || key === 40) this.next();
+    if (key === 37 || key === 38) this.prev();
+    if (key === 27) window.history.back();
   };
 
   componentWillUnmount() {
@@ -160,8 +158,17 @@ class Slides extends Component {
     }
 
     const currentSlide = slides[current];
-    return <Slide {...currentSlide} next={this.next} prev={this.prev} />;
+    return (
+      <div>
+        {this.props.timerUsed && <Timer />}
+        <Slide {...currentSlide} next={this.next} prev={this.prev} />
+      </div>
+    );
   }
 }
 
-export default Slides;
+const mapStateToProps = state => ({
+  timerUsed: state.timer.timerUsed,
+});
+
+export default connect(mapStateToProps)(Slides);
