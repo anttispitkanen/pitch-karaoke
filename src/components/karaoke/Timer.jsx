@@ -14,7 +14,7 @@ class Timer extends Component {
     };
   }
 
-  mayberDecreaseTime = () => {
+  maybeDecreaseTime = () => {
     if (this.props.seconds > 0) {
       this.props.timerDecrease();
     } else {
@@ -25,7 +25,7 @@ class Timer extends Component {
   componentDidMount() {
     this.props.timerReset();
     this.setState({
-      interval: setInterval(this.mayberDecreaseTime, 1000),
+      interval: setInterval(this.maybeDecreaseTime, 1000),
     });
   }
 
