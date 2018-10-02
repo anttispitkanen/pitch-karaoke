@@ -91,7 +91,7 @@ class Counter extends Component {
           </button>
         </div>
         <p className="counter-hint">
-          (Click on the time to set a different time)
+          (Click on the timer to change the time!)
         </p>
         <TimeSelector
           className={classNames({ visible: this.state.selectorVisible })}
