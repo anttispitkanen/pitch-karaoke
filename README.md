@@ -6,7 +6,7 @@ But there is a problem in pitching. Namely, you have to have a company, a produc
 
 That's where [pitchkaraokes.com](https://pitchkaraokes.com/) comes to the resque! It frees you from the pain of having to come up with an idea. You don't even need to name your business yourself. Heck, it even creates the pitch deck for you! 👌
 
-Use it to practice pitching and being able to come up with stuff that's completely improvised but sounds convincing, or just to have fun. And like all fun things, it's better when shared with friends ❤️️
+Use it to practice pitching and being able to come up with stuff that's completely improvised but sounds convincing, or just to have fun. And like all fun things, it's better when shared with friends ❤️️❤️️❤️️
 
 ## Installation and usage
 
