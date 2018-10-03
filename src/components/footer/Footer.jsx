@@ -14,7 +14,7 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Github
+        GitHub
       </a>!
     </span>
     <span className="copyright">

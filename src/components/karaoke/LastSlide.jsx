@@ -29,7 +29,8 @@ class LastSlide extends Component {
         </button>
 
         <p className="last-slide-hint">
-          (Press down, right or space to go again)
+          Tip: Press <i>down</i>, <i>right</i>, or <i>space</i> to go again.<br />
+          Or hit <i>esc</i> to end pitching.
         </p>
       </div>
     );
