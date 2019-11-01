@@ -18,7 +18,7 @@ const Footer = () => (
       </a>!
     </span>
     <span className="copyright">
-      © 2018{' '}
+      © 2019{' '}
       <a href="http://tampere.es" target="_blank" rel="noopener noreferrer">
         Tampere ES
       </a>,{' '}
